@@ -1,7 +1,7 @@
 <template>
   <v-card flat tile>
     <v-toolbar dark height="75" color="teal lighten-3 pt-2">
-      <v-toolbar-title> <v-btn text x-large> Medoge</v-btn> </v-toolbar-title>
+      <v-toolbar-title> <v-btn text x-large> Medogem</v-btn> </v-toolbar-title>
 
       <v-spacer></v-spacer>
 

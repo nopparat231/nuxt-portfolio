@@ -9,8 +9,8 @@
 
         <v-container fluid>
           <Card />
+        
         </v-container>
-
       </v-main>
     </v-layout>
   </v-app>

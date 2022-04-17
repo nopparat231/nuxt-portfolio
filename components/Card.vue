@@ -11,8 +11,8 @@
         <v-card
           :elevation="hover ? 12 : 2"
           class="mx-auto rounded"
-          :color="item.color"
-          dark
+          color="#F9FFFF"
+          
         >
           <v-list-item three-line>
             <v-list-item-content>
@@ -30,7 +30,7 @@
               </v-list-item-subtitle>
             </v-list-item-content>
 
-            <v-list-item-avatar size="125"
+            <v-list-item-avatar size="125" tile
               ><v-img :src="item.src"></v-img
             ></v-list-item-avatar>
           </v-list-item>
