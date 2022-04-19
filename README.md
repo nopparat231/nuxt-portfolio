@@ -1,5 +1,7 @@
 # nuxt-portfolio
-
+heroku login
+heroku git:remote -a v-nuxtjs-vuetifyjs
+git push heroku main
 ## Build Setup
 
 ```bash
