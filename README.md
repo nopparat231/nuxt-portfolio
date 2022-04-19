@@ -1,8 +1,8 @@
 # `UptoHeroku`
 ```bash
-$ heroku login
-$ heroku git:remote -a v-nuxtjs-vuetifyjs
-$ git push heroku main
+heroku login
+heroku git:remote -a v-nuxtjs-vuetifyjs
+git push heroku main
 ```
 
 ### `Example`
