@@ -72,4 +72,4 @@ More information about the usage of this directory in [the documentation](https:
 
 ### Excemple
 
-
+![Ex page](https://github.com/nopparat231/nuxt-portfolio/blob/main/img/Capture1.PNG)
