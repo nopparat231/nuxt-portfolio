@@ -50,7 +50,7 @@ export default {
       "https://gnews.io/api/v4/top-headlines/?" +
       "Languages=en&" +
       "token=58bc569d2edfd30acc346f05d4e289cd";
-    const news = await this.$axios.$get(url);
+    const news = await this.$axios.$get(url,{ headers: {'Access-Control-Allow-Origin': '*'} });
     this.news = news.articles;
   },
 };
