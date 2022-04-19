@@ -15,7 +15,7 @@
                 <v-btn icon>
                   <v-icon>mdi-heart-outline</v-icon>
                 </v-btn>
-                {{ item.published_date }}
+                {{ item.source.name }}
               </div>
               <v-list-item-title class="text-h5">
                 <a :href="item.url" target="_blank"  >{{ item.title }}</a>
@@ -26,7 +26,7 @@
             </v-list-item-content>
 
             <v-list-item-avatar size="125" tile
-              ><v-img :src="item.image"></v-img
+              ><v-img :src="item.urlToImage"></v-img
             ></v-list-item-avatar>
           </v-list-item>
         </v-card>
@@ -47,9 +47,11 @@ export default {
   },
   async created() {
     const url =
-      "https://newsapi.in/newsapi/news.php?key=SYHhC8SLM8yWGa5EqaetzwZep6Ej6l&category=korean";
+      "https://gnews.io/api/v4/top-headlines/?" +
+      "Languages=en&" +
+      "token=58bc569d2edfd30acc346f05d4e289cd";
     const news = await this.$axios.$get(url);
-    this.news = news.News;
+    this.news = news.articles;
   },
 };
 </script>
