@@ -5,7 +5,6 @@
     <div class="pb-3" v-for="(item, i) in news" :key="i">
       <v-hover v-slot="{ hover }">
         <v-card
-          @click="ShowId(item.source.id)"
           :elevation="hover ? 12 : 2"
           class="mx-auto rounded"
           color="#F9FFFF"
@@ -19,10 +18,10 @@
                 {{ item.source.name }}
               </div>
               <v-list-item-title class="text-h5">
-                {{ item.title }}
+                <a :href="item.url" target="_blank"  >{{ item.title }}</a>
               </v-list-item-title>
               <v-list-item-subtitle>
-                Greyhound divisely hello coldly fonwderfully
+                {{ item.description }}
               </v-list-item-subtitle>
             </v-list-item-content>
 
@@ -33,36 +32,12 @@
         </v-card>
       </v-hover>
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    items: [
-      {
-        id: 1,
-        color: "#1F7087",
-        src: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
-        title: "Supermodel",
-        artist: "Foster the People",
-      },
-      {
-        id: 2,
-        color: "#952175",
-        src: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
-        title: "Halcyon Days",
-        artist: "Ellie Goulding",
-      },
-      {
-        id: 3,
-        color: "#3892DB",
-        src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
-        title: "Unlimited music",
-        artist: "Best airlines",
-      },
-    ],
     news: [],
   }),
   methods: {
