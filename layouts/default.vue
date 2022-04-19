@@ -1,26 +1,26 @@
 <template>
   <v-app>
-    <v-layout row justify-center>
-      <v-main>
-        <Navbar />
+    <v-container fluid>
+          <Navbar />
+      <v-layout row justify-center>
+    
 
-        <v-subheader>Today</v-subheader>
-        <v-divider></v-divider>
-
-        <v-container fluid>
-          <Card />
+        <v-main>
+          <v-col md="6" offset-md="3">
+            <Nuxt />
+          </v-col>
+        </v-main>
         
-        </v-container>
-      </v-main>
-    </v-layout>
+      </v-layout>
+    </v-container>
   </v-app>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
-import Card from "../components/Card.vue";
+
 export default {
   name: "DefaultLayout",
-  components: { Navbar, Card },
+  components: { Navbar },
 };
 </script>

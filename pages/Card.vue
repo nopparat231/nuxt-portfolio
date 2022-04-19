@@ -1,18 +1,14 @@
 <template>
-  <v-row>
-    <v-col
-      md="6"
-      class="pl-6 pr-6"
-      offset-md="3"
-      v-for="(item, i) in items"
-      :key="i"
-    >
-      <v-hover v-slot="{ hover }" disabled>
+  <div class="pt-3">
+    <v-subheader>Today</v-subheader>
+    <v-divider class="pb-3"></v-divider>
+    <div class="pb-3" v-for="(item, i) in items" :key="i">
+      <v-hover v-slot="{ hover }">
         <v-card
+          @click="ShowId(item.id)"
           :elevation="hover ? 12 : 2"
           class="mx-auto rounded"
           color="#F9FFFF"
-          
         >
           <v-list-item three-line>
             <v-list-item-content>
@@ -36,8 +32,8 @@
           </v-list-item>
         </v-card>
       </v-hover>
-    </v-col>
-  </v-row>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -45,18 +41,21 @@ export default {
   data: () => ({
     items: [
       {
+        id: 1,
         color: "#1F7087",
         src: "https://cdn.vuetifyjs.com/images/cards/foster.jpg",
         title: "Supermodel",
         artist: "Foster the People",
       },
       {
+        id: 2,
         color: "#952175",
         src: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
         title: "Halcyon Days",
         artist: "Ellie Goulding",
       },
       {
+        id: 3,
         color: "#3892DB",
         src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
         title: "Unlimited music",
@@ -64,6 +63,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    ShowId(id) {
+      alert(id);
+    },
+  },
 };
 </script>
 

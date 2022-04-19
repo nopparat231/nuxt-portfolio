@@ -1,11 +1,15 @@
 <template>
   <div>
-    <h1>Hell</h1>
+
+    <Card />
+    
   </div>
 </template>
 
 <script>
+import Card from "./Card.vue";
 export default {
   name: "IndexPage",
+  components: { Card },
 };
 </script>
